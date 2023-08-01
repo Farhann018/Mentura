@@ -6,7 +6,7 @@ import NextPrev from "../components/NextPrev";
 
 export default function UserDash() {
     return (
-        <section>
+        <section className="bg-black">
             <Header className=""/>
             <div className="h-screen w-full bg-gradient-to-b from-[#71BED0] to-[#FDE7EA] ...">
                 <div className="flex flex-col justify-center h-[50rem] items-center w-full ">
