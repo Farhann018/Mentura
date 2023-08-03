@@ -1,10 +1,10 @@
 import React from "react"
 
-export default function LogoH({ className }) {
+export default function Banner({ className }) {
     return(
         <section>
             <div className={"p" + (className !== undefined ? " " + className : "")}>
-                <img className="h-auto w-[4rem] object-cover" src="/images/logo.png" alt="logo" />
+                <img className="h-auto w-[35rem] object-fill" src="/images/Banner.png" alt="Banner" />
             </div>
         </section>
     )

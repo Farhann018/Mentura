@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-const ProgressTracker = () => {
+const ProgressTracker = ({question}) => {
+
   const circlesCount = 4; // Change this to match the number of circles you have.
 
   // State to manage the current active step
@@ -33,7 +34,7 @@ const ProgressTracker = () => {
     <div className="progress-tracker ">
       <div className="circle-container">
         {Array.from({ length: circlesCount }).map((_, index) => (
-          <div key={index} className={`circle ${currentActive > index + 1 ? 'active' : ''}`}>
+          <div key={index} className={`circle ${question > index + 1 ? 'bg-blue-500' : ''}`}>
             {index + 1}
           </div>
         ))}
@@ -43,5 +44,4 @@ const ProgressTracker = () => {
     </div>
   );
 };
-
 export default ProgressTracker;

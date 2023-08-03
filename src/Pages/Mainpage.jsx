@@ -2,15 +2,19 @@ import Header from "../components/Header";
 import Bar from "../components/Bar";
 import Footer from "../components/Footer";
 import NextPrev from "../components/NextPrev";
+import { useState } from "react";
 
 
 export default function UserDash() {
+    const [question, setQuestion] = useState(1)
     return (
         <section className="bg-black">
             <Header className=""/>
             <div className="h-screen w-full bg-gradient-to-b from-[#71BED0] to-[#FDE7EA] ...">
                 <div className="flex flex-col justify-center h-[50rem] items-center w-full ">
-                    <Bar className=""/>
+
+                    <Bar question={question} className=""/>
+
                     <div className="form w-1/2 h-auto p-8">
                         <div className="flex justify-start text-center mb-5">
                             <div className="font-medium text-3xl">
@@ -42,7 +46,7 @@ export default function UserDash() {
 
                             </div>
                         </div>
-                        <NextPrev className=""/>
+                        <NextPrev question={question} setQuestion={setQuestion} className=""/>
                        
                     
                     </div>

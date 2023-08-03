@@ -1,14 +1,10 @@
 import React from 'react';
 import ProgressTracker from './ProgressTracker';
 
-const App = () => {
+const Bar = ({question}) => {
   return (
-    <div className="app">
-      {/* Other components */}
-      <ProgressTracker />
-      {/* Other components */}
-    </div>
+      <ProgressTracker question={question} />
   );
 };
 
-export default App;
+export default Bar;
