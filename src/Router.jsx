@@ -11,9 +11,9 @@ const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/Mainpage" element={<Mainpage />} />
-                <Route path="/Results" element={<Results />} />
-                <Route path="/Summary" element={<Summary />} />
+                <Route path="/question" element={<Mainpage />} />
+                <Route path="/result" element={<Results />} />
+                <Route path="/summary" element={<Summary />} />
                 <Route path="/" element={<LandingPage />} />
             </Routes>
         </BrowserRouter>
