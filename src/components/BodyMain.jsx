@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Banner from "./Banner";
 
 export default function BodyMain({ className }) {
@@ -23,9 +24,9 @@ export default function BodyMain({ className }) {
                     </div>
                     <div className="flex justify-start space-x-6">
                         <div>
-                            <button className="bg-[#FFA654] hover:bg-[#B1A79D] hover:text-black text-xl text-white font-bold py-1 px-8 rounded-lg transition-all ease-in-out delay-150 tracking-wider">
-                                Start
-                            </button>
+                            <Link to="/start" className="bg-[#FFA654] hover:bg-[#B1A79D] hover:text-black text-xl text-white font-bold py-1 px-8 rounded-lg transition-colors tracking-wider">
+                                Get Started
+                            </Link>
                         </div>
                         <div className="flex text-center items-center text-lg font-bold tracking-wider">
                             Discover

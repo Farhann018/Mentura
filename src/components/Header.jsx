@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import LogoH from "./LogoH";
 
 
-export default function Header({ className }) {
+export default function Header({ className = undefined }) {
     return (
         <section className="absolute top-0 w-full left-0">
             <div className={" bg-primary w-full p-4" + (className !== undefined ? " " + className : "")}>
                 <div className="mx-24">
-                    <div className="flex justify-between">
+                    <div className="flex justify-between items-center">
                         <div className="flex items-center text-center">
                             <LogoH className=""/>
                             <span className="text-lg font-bold mt-3">
@@ -25,9 +26,9 @@ export default function Header({ className }) {
                                 About us
                             </div>
                         </div>
-                        <div className="flex transition ease-in-out delay-150 text-gray-600 hover:-translate-y-1 hover:scale-110 hover:cursor-pointer text-base font-medium items-center text-center hover:text-gray-800 mt-3">
-                            Sign Up
-                        </div>
+                            <Link to="/start" className="h-fit bg-[#FFA654] hover:bg-[#B1A79D] hover:text-black text-xl text-white font-bold py-1 px-8 rounded-lg transition-colors tracking-wider">
+                                Get Started
+                            </Link>
                     </div>
                     
                 </div>

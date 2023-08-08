@@ -4,6 +4,7 @@ import Mainpage from "./Pages/Mainpage"
 import Results from "./Pages/Results";
 import Summary from "./Pages/Summary";
 import LandingPage from "./Pages/LandingPage";
+import Start from "./Pages/Start";
 
 
 
@@ -11,10 +12,11 @@ const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/start" element={<Start />} />
                 <Route path="/question" element={<Mainpage />} />
                 <Route path="/result" element={<Results />} />
                 <Route path="/summary" element={<Summary />} />
-                <Route path="/" element={<LandingPage />} />
             </Routes>
         </BrowserRouter>
     );

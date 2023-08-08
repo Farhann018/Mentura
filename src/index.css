@@ -108,21 +108,26 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   border: 0px;
   border-color: #000000;
 }
-button {
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-}
+/* button { */
+/*   margin: 10px; */
+/*   padding: 10px 20px; */
+/*   font-size: 16px; */
+/*   border: none; */
+/*   background-color: #007bff; */
+/*   color: #fff; */
+/*   cursor: pointer; */
+/* } */
 
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
 
+.gsap-word {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
 
-
+.char {
+    @apply translate-y-full transition-transform;
+}
 
