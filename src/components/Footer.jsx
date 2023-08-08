@@ -8,7 +8,7 @@ export default function Footer({ className }) {
       <div className="relative overflow-hidden">
         <Waves className="" />
         <div className="absolute bottom-0 left-0 right-0 top-[21rem] h-full w-full overflow-hidden">
-          <div className="flex h-full max-w-[80rem] mx-auto">
+          <div className="flex h-full max-w-[90rem] mx-auto">
             <div className="flex w-1/3 p-8">
               <div className="flex">
                 <LogoF className="" />
@@ -41,7 +41,7 @@ export default function Footer({ className }) {
             <div className="flex w-1/3">
               <div className="flex items-center text-center">
                 <svg
-                  className="text-gray-500"
+                  className="text-"
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
