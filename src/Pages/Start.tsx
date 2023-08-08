@@ -4,6 +4,11 @@ import Header from "../components/Header"
 import SplitType from "split-type";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "../../node_modules/axios/index";
+import Form from "../components/Form";
+import Footer from "../components/Footer";
+
+
+
 
 const Start = () => {
     const url = import.meta.env.VITE_API_URL;
@@ -71,41 +76,51 @@ const Start = () => {
         });
     }
     return (
-        <div className="relative flex items-center justify-center min-h-screen">
+        <div className="relative flex items-center justify-center min-h-screen bg-primary ">
             <Header />
-            <div className="container mx-auto">
-                <h1 className="text-4xl font-bold gsap-word">Hey There!</h1>
-                <p className="text-2xl gsap-word">Before we begin, please tell us a little about yourself</p>
-                <form onSubmit={submit} className="w-96 mt-3 gsap-form opacity-0 transition-opacity">
-                    <div className="mb-3">
-                        <label htmlFor="">Name</label>
-                        <input value={name} onChange={(e) => setName(e.target.value)} type="text" className="w-full rounded border-2 py-1 px-2" />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="">Age</label>
-                        <input value={age} onChange={(e) => setAge(e.target.value)} type="number" min={0} max={125} className="w-full rounded border-2 py-1 px-2" />
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="">Gender</label>
-                        <select required value={gender} onChange={e => setGender(e.target.value)} className="bg-white w-full rounded border-2 py-1 px-2">
-                            <option value="" disabled>Choose</option>
-                            <option value="1">Male</option>
-                            <option value="2">Female</option>
-                            <option value="3">Transgender</option>
-                            <option value="4">Don't want to disclose</option>
-                        </select>
-                    </div>
-                    <div className="mb-3">
-                        <label htmlFor="">Region</label>
-                        <select value={region} onChange={e => setRegion(e.target.value)} className="bg-white w-full rounded border-2 py-1 px-2">
-                            {regions.map((region, idx) => <option key={`region-${idx}`} value={region.id}>{region.name}</option>)}
-                        </select>
-                    </div>
-                    <button className="rounded shadow inline-flex items-center justify-center w-64 bg-sky-200 text-sky-900 h-8 transition-colors hover:bg-sky-300">Lets get started</button>
-                </form>
+            <div className="flex justify-between w-full mx-48">
+
+                <div className="container p-8 bg-white h-auto w-[43rem] rounded-3xl box">
+                    <h1 className="text-3xl font-bold gsap-word">Lets Get To Know You!</h1>
+                    {/* <p className="text-2xl gsap-word">Before we begin, please tell us a little about yourself</p> */}
+                    <form onSubmit={submit} className="w-full mt-3 ">
+                        <div className="mb-6 font-medium text-lg">
+                            <label htmlFor="">Name</label>
+                        <input value={name} onChange={(e) => setName(e.target.value)} type="text" className="w-full rounded-xl bg-[#CBCBFE] border-1 py-1 px-2 mt-3" />
+                        </div>
+                        <div className="mb-6 font-medium text-lg">
+                            <label htmlFor="">Age</label>
+                            <input value={age} onChange={(e) => setAge(e.target.value)} type="number" min={0} max={125} className="w-full rounded-xl border-1 py-1 px-2 mt-3 bg-[#CBCBFE] " />
+                        </div>
+                        <div className="mb-6 font-medium text-lg">
+                            <label htmlFor="">Gender</label>
+                            <select required value={gender} onChange={e => setGender(e.target.value)} className="w-full rounded-xl bg-[#CBCBFE] border-1 py-1 px-3 mt-3">
+                                <option value="" disabled>Choose</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                                <option value="3">Transgender</option>
+                                <option value="4">Don't want to disclose</option>
+                            </select>
+                        </div>
+                        <div className="mb-6 font-medium text-lg">
+                            <label htmlFor="">Region</label>
+                            <select value={region} onChange={e => setRegion(e.target.value)} className="w-full rounded-xl bg-[#CBCBFE] border-1 py-1 px-3 mt-3">
+                                {regions.map((region, idx) => <option key={`region-${idx}`} value={region.id}>{region.name}</option>)}
+                            </select>
+                        </div>
+                        <button className="rounded-xl shadow inline-flex items-center justify-center px-4 py-2 bg-[#B0B0FE] text-black  transition-colors hover:bg-sky-300 ">Start Test</button>
+                    </form>
+                </div>
+                <div>
+                    <Form className=""/>
+                </div>
             </div>
+
             <Toaster />
         </div>
+
+
+
     )
 }
 
