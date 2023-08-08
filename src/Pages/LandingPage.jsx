@@ -8,8 +8,8 @@ export default function Summary() {
   return (
     <section>
             <Header className=""/>
-            <section className="bg-primary h-screen w-full">
-                <div className="max-w-[80rem] mx-auto">
+            <section className="bg-primary h-screen w-full flex items-center justify-center">
+                <div className="container mx-auto">
                     <BodyMain className=""/>
                 </div>
             </section>

@@ -3,9 +3,9 @@ import Banner from "./Banner";
 
 export default function BodyMain({ className }) {
     return (
-        <section>
-            <div className="flex justify-between  pt-20">
-                <div className="flex flex-col space-y-3 mt-16">
+        <section className="w-full">
+            <div className="flex justify-around items-center w-full">
+                <div className="flex flex-col space-y-3">
                     <div className="text-5xl font-semibold text-gray-800 tracking-wider">
                         Mental health,
                     </div>

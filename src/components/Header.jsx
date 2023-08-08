@@ -4,7 +4,7 @@ import LogoH from "./LogoH";
 
 export default function Header({ className }) {
     return (
-        <section>
+        <section className="absolute top-0 w-full left-0">
             <div className={" bg-primary w-full p-4" + (className !== undefined ? " " + className : "")}>
                 <div className="mx-24">
                     <div className="flex justify-between">
