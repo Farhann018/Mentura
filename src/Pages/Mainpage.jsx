@@ -111,7 +111,7 @@ export default function UserDash() {
               <div className="form w-[52rem] h-[25rem] p-10 mt-20">
                 <div className="flex justify-start text-center mb-5">
                 {question && state && 
-                  <div className="font-medium text-2xl">Your may have {state.statement}, continue to find out</div>
+                  <div className="font-medium text-2xl">You may have {state.statement}, continue to find out</div>
                 }
                 {question && !state && 
                   <div className="font-medium text-2xl">{question && question.statement}</div>
