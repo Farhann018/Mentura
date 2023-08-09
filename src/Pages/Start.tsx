@@ -6,6 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 import axios from "../../node_modules/axios/index";
 import Form from "../components/Form";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -17,6 +18,7 @@ const Start = () => {
     const [age, setAge] = useState("");
     const [gender, setGender] = useState("");
     const [region, setRegion] = useState("");
+    const navigate = useNavigate();
     useEffect(() => {
         const split = new SplitType(".gsap-word");
         gsap.to(".char", {
@@ -63,7 +65,7 @@ const Start = () => {
         })
         .then((response) => {
             localStorage.setItem("token", response.data.token);
-            console.log(response);
+            return navigate("/question");
         })
         .catch(({ response }) => {
             if (response.status === 422) {
