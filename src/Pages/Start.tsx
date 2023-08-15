@@ -80,9 +80,10 @@ const Start = () => {
     return (
         <div className="relative flex items-center justify-center min-h-screen bg-primary ">
             <Header />
-            <div className="flex justify-between w-full mx-48">
+            <div className="flex justify-center w-full ">
 
-                <div className="container p-8 bg-white h-auto w-[43rem] rounded-3xl box">
+                <div className="flex justify-between container p-8 bg-white h-auto w-[70rem] rounded-3xl box">
+                    <div>
                     <h1 className="text-3xl font-bold gsap-word">Lets Get To Know You!</h1>
                     {/* <p className="text-2xl gsap-word">Before we begin, please tell us a little about yourself</p> */}
                     <form onSubmit={submit} className="w-full mt-3 ">
@@ -112,12 +113,14 @@ const Start = () => {
                         </div>
                         <button className="rounded-xl shadow inline-flex items-center justify-center px-4 py-2 bg-[#B0B0FE] text-black  transition-colors hover:bg-sky-300 ">Start Test</button>
                     </form>
+                    </div>
+                    <div>
+                    <Form className=""/>
+                    </div>
                 </div>
                 <div>
-                    <Form className=""/>
                 </div>
             </div>
-
             <Toaster />
         </div>
 
