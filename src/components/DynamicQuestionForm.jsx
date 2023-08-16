@@ -84,7 +84,7 @@ const DynamicForm = () => {
 
             <button
               onClick={(e) => addOption(e, questionIndex)}
-              className="bg-blue-500 hover:bg-yellow-300 text-white px-4 py-2 rounded-lg"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors  w-fit"
             >
               Add Option
             </button>
@@ -93,7 +93,7 @@ const DynamicForm = () => {
       ))}
       <button
         onClick={addQuestion}
-        className="bg-indigo-500 hover:bg-yellow-500 text-white mt-4 px-4 py-2 rounded-lg shadow transition"
+        className="bg-indigo-500 hover:bg-indigo-600 text-white mt-4 px-4 py-2 rounded-lg shadow transition-colors w-fit"
       >
         Add Question
       </button>
