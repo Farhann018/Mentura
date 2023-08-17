@@ -123,7 +123,7 @@ export default function UserDash() {
                 <div className="mt-10">
                   <div className="flex justify-start space-x-3 items-center flex-wrap">
                     {question && !state && question.options.map((op, idx)  => 
-                        <label key={op.id + '-' + idx} onClick={() => setOption(op.id)} htmlFor={op.id} className={(op.id === option ? "scale-110 bg-[#6A6390] text-white " : "") + "flex px-4 py-2 bg-[#B6ACEE] shadow-xl relative items-center justify-center flex rounded-xl font-base text-xl text-center items-center space-x-5 hover:bg-[#6A6390] hover:text-white transition ease-in-out hover:-translate-y-1 hover:cursor-pointer"}>
+                        <label key={op.id + '-' + idx} onClick={() => setOption(op.id)} htmlFor={op.id} className={(op.id === option ? "scale-110 bg-[#6A6390] text-white " : "") + "flex px-4 py-2 bg-[#FFFFFF] shadow-xl relative items-center justify-center  rounded-xl font-base text-xl text-center  space-x-5 hover:bg-[#6A6390] hover:text-white transition ease-in-out hover:-translate-y-1 hover:cursor-pointer"}>
                             {op.statement}
                         </label>
                     )}
