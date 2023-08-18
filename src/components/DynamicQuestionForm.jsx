@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 
-const DynamicForm = () => {
+const DynamicQuestionForm = () => {
   const [questions, setQuestions] = useState([
     {
       statement: "",
@@ -154,4 +154,4 @@ const DynamicForm = () => {
   );
 };
 
-export default DynamicForm;
+export default DynamicQuestionForm;
