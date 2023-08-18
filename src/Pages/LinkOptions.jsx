@@ -11,6 +11,9 @@ const LinkOptions = () => {
   const url = import.meta.env.VITE_API_URL;
   // TODO: Update local array after updating options
   useEffect(() => {
+    console.log(options);
+  }, [options]);
+  useEffect(() => {
     const id = toast.loading("Loading questions");
     axios
       .get(url + "/questions")
@@ -49,10 +52,15 @@ const LinkOptions = () => {
   useEffect(() => loadSelectedQuestion(), [selectedQuestion]);
 
   const loadSelectedQuestion = () => {
-    if (!selectedQuestion) return;
+    if (!selectedQuestion) {
+      setOptions([]);
+      return;
+    }
     const question = questions.find((q) => q.id == selectedQuestion);
-    console.log(question);
-    if (!question) return;
+    if (!question) {
+      setOptions([]);
+      return;
+    }
 
     setOptions(question.options);
   };
@@ -145,10 +153,7 @@ const LinkOptions = () => {
             </thead>
             <tbody id="linkage-table-body">
               <tr>
-                <td
-                  className="border px-8 py-2"
-                  rowSpan={options.length === 0 ? 1 : options.length}
-                >
+                <td className="border px-8 py-2">
                   <select
                     className="w-full border rounded-lg px-2 py-1"
                     onChange={(e) => setSelectedQuestion(e.target.value)}
@@ -179,11 +184,12 @@ const LinkOptions = () => {
                     );
                   })}
                 </td>
-                <td className="border px-4 py-2">
-                  {options.map((option, idx) => {
-                    return (
-                      <div className="p-2" key={`option-${idx}`}>
+                <td className="border px-6 py-2">
+                  <div className="flex gap-2 flex-col">
+                    {options.map((option, idx) => {
+                      return (
                         <select
+                          key={`option-${idx}-question-${option.next_question_id}`}
                           className="w-full border rounded-lg px-2 py-1"
                           onChange={(e) => {
                             updateOptionQuestion(option.id, e.target.value);
@@ -202,15 +208,16 @@ const LinkOptions = () => {
                             );
                           })}
                         </select>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
                 </td>
-                <td className="border px-4 py-2">
-                  {options.map((option, idx) => {
-                    return (
-                      <div className="p-2" key={`state-${idx}`}>
+                <td className="border px-6 py-4">
+                  <div className="flex gap-2 flex-col">
+                    {options.map((option, idx) => {
+                      return (
                         <select
+                          key={`state-${idx}-state-${option.state_id}`}
                           className="w-full border rounded-lg px-2 py-1"
                           onChange={(e) =>
                             updateOptionState(option.id, e.target.value)
@@ -226,9 +233,9 @@ const LinkOptions = () => {
                             );
                           })}
                         </select>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
                 </td>
               </tr>
             </tbody>
