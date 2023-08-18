@@ -8,17 +8,18 @@ import Start from "./Pages/Start";
 import AdminRouter from "./AdminRouter";
 
 const Router = () => {
-    return (
-        <BrowserRouter>
-            <Routes>
-            <Route path="/" element={<LandingPage />} />
-                <Route path="/start" element={<Start />} />
-                <Route path="/question" element={<Mainpage />} />
-                <Route path="/result" element={<Results />} />
-                <Route path="/summary" element={<Summary />} />
-            </Routes>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/start" element={<Start />} />
+        <Route path="/question" element={<Mainpage />} />
+        <Route path="/result" element={<Results />} />
+        <Route path="/summary" element={<Summary />} />
+        <Route path="/admin/*" element={<AdminRouter />} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default Router;

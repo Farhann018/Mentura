@@ -3,16 +3,6 @@ import Admin from "../Layouts/Admin";
 import DynamicForm from "../components/DynamicQuestionForm";
 
 const AddQuestion = () => {
-  const [questions, setQuestions] = useState({
-    0: {
-      statement: "",
-      options: [
-        {
-          statement: "",
-        },
-      ],
-    },
-  });
   return (
     <Admin>
       <div className="bg-indigo-300 text-white text-center py-2 flex justify-between ">
