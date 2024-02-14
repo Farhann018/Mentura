@@ -4,6 +4,7 @@ import Mainpage from "./Pages/Mainpage";
 import Results from "./Pages/Results";
 import Summary from "./Pages/Summary";
 import LandingPage from "./Pages/LandingPage";
+import Aboutus from "./Pages/Aboutus";
 import Start from "./Pages/Start";
 import AdminRouter from "./AdminRouter";
 
@@ -16,6 +17,7 @@ const Router = () => {
                 <Route path="/question" element={<Mainpage />} />
                 <Route path="/result" element={<Results />} />
                 <Route path="/summary" element={<Summary />} />
+                <Route path="/Aboutus" element={<Aboutus />} />
             </Routes>
         </BrowserRouter>
     );

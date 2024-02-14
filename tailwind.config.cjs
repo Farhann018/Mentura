@@ -14,9 +14,7 @@ export default {
         },
         colors:{
           primary:"#DEDEF8",
-          secondary:"#CDCDEA",
-
-  
+          secondary:"#CDCDEA",  
         },
     },
   },

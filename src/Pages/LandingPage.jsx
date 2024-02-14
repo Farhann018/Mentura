@@ -27,7 +27,7 @@ export default function Summary() {
                           </div>
                   </section>
                   <section className="bg-primary h-[30rem] w-full">
-                        <div className="relative">
+                        <div className="relative ">
                               <div className="absolute -top-[7rem] m-auto left-0 right-0">
                                     <Element className="" />
                                 </div>
