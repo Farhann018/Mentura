@@ -1,7 +1,7 @@
 import Admin from "../Layouts/Admin";
-import DynamicQuestionForm from "../components/DynamicQuestionForm";
+import DynamicStateForm from "../components/DynamicStateForm";
 
-const AddQuestion = () => {
+const AddState = () => {
   return (
     <Admin>
       <div className="bg-indigo-300 text-white text-center py-2 flex justify-between ">
@@ -10,12 +10,12 @@ const AddQuestion = () => {
       </div>
       <main>
         <div className="container mx-auto py-6">
-          <h1 className="text-2xl">Add Questions</h1>
-          <DynamicQuestionForm />
+          <h1 className="text-2xl">Add States</h1>
+          <DynamicStateForm />
         </div>
       </main>
     </Admin>
   );
 };
 
-export default AddQuestion;
+export default AddState;
