@@ -9,20 +9,6 @@ import Start from "./Pages/Start";
 import AdminRouter from "./AdminRouter";
 
 const Router = () => {
-<<<<<<< HEAD
-    return (
-        <BrowserRouter>
-            <Routes>
-            <Route path="/" element={<LandingPage />} />
-                <Route path="/start" element={<Start />} />
-                <Route path="/question" element={<Mainpage />} />
-                <Route path="/result" element={<Results />} />
-                <Route path="/summary" element={<Summary />} />
-                <Route path="/Aboutus" element={<Aboutus />} />
-            </Routes>
-        </BrowserRouter>
-    );
-=======
   return (
     <BrowserRouter>
       <Routes>
@@ -32,10 +18,10 @@ const Router = () => {
         <Route path="/result" element={<Results />} />
         <Route path="/summary" element={<Summary />} />
         <Route path="/admin/*" element={<AdminRouter />} />
+        <Route path="/Aboutus" element={<Aboutus />} />
       </Routes>
     </BrowserRouter>
   );
->>>>>>> d34c4082c7b3e5998d64f2d929bb8fad2fc648af
 };
 
 export default Router;
